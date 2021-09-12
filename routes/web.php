@@ -32,7 +32,9 @@ Route::group(['middleware' => ['auth']], function() {
 Auth::routes();
 
 // Customer Route
-Route::get('/customers', [App\Http\Controllers\CustomerController::class, 'get_customer_data'])->name('data');
+Route::get('/customers', [App\Http\Controllers\CustomerController::class, 'get_customer_data'])->name('customer_data');
+Route::get('/customers/{type}/{id}', [App\Http\Controllers\CustomerController::class, 'get_customer_sales'])->name('customer_sales');
+Route::post('/customers/sales', [App\Http\Controllers\CustomerController::class, 'get_monthly_sales'])->name('customer_sales');
 Route::post('/addcustomer', [App\Http\Controllers\CustomerController::class, 'store'])->name('customer.store');
 Route::get('/addcustomer/{id}/edit', [App\Http\Controllers\CustomerController::class, 'update'])->name('customer.update');
 Route::delete('/addcustomer/{id}',  [App\Http\Controllers\CustomerController::class, 'destroy'])->name('customer.destroy');

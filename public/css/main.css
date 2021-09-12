@@ -2,9 +2,16 @@
     border-color: red !important;
 }
 
+#generate-report {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-34%);
+}
+
 #invoice__modal .table-responsive {
     border-radius: 8px;
     height: 370px;
+    overflow: hidden;
 }
 
 

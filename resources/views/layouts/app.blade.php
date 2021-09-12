@@ -102,7 +102,7 @@
         </main>
     </div>
     <script>
-        var root_url = <?php echo json_encode(route('data')) ?>;
+        var root_url = <?php echo json_encode(route('customer_data')) ?>;
         var product_url = <?php echo json_encode(route('product_data')) ?>;
         var invoice_url = <?php echo json_encode(route('invoice_data')) ?>;
         var get_invoice_customer_url = <?php echo json_encode(route('get_customer_invoice')) ?>;
@@ -110,6 +110,7 @@
         var create_invoice_pdf_url =<?php echo json_encode(route('create_invoice_pdf'))?>;
         var store = <?php echo json_encode(route('customer.store')) ?>;
         var product_store = <?php echo json_encode(route('product.store')) ?>;
+        var customer_url = <?php echo json_encode(route('customer_data'))?>;
     </script>
     @stack('ajax_crud')
 </body>
